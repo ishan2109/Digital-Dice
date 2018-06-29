@@ -125,8 +125,8 @@ void setup() {
 
     
   void loop() {
-
-    int ctsValue = digitalRead(ctsPin);
+    while(digitalRead(ctsPin) != HIGH) { } 
+    int ctsValue = HIGH;
     
     if(ctsValue == HIGH){
     Serial.println("Touch");
